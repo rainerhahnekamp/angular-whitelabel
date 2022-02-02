@@ -15,10 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@eternal/app-shell": ["libs/app-shell/src/index.ts"],
       "@eternal/customer/data": ["libs/customer/data/src/index.ts"],
       "@eternal/customer/feature": ["libs/customer/feature/src/index.ts"],
       "@eternal/customer/model": ["libs/customer/model/src/index.ts"],
-      "@eternal/customer/ui": ["libs/customer/ui/src/index.ts"]
+      "@eternal/customer/ui": ["libs/customer/ui/src/index.ts"],
+      "@eternal/holidays": ["libs/holidays/src/index.ts"],
+      "@eternal/shared/config": ["libs/shared/config/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

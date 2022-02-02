@@ -22,7 +22,7 @@ export class CustomerComponent {
     formly.requiredDate('birthdate', 'Birthdate'),
   ];
 
-  submit(customer: Customer) {
+  submit() {
     if (this.formGroup.valid) {
       this.save.emit(this.formGroup.value);
     }

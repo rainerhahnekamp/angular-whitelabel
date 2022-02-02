@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { CustomerActions } from '@eternal/customer/data';
 import { Customer } from '@eternal/customer/model';
 import { Store } from '@ngrx/store';
+import { CustomerActions } from '../../../data/src/lib/customer.actions';
 
 @Component({
   selector: 'eternal-add-customer',

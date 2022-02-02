@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "app-shell": {
+      "tags": []
+    },
     "customer-data": {
       "tags": ["domain:customer", "type:data"]
     },
@@ -45,6 +48,12 @@
     "eternal-e2e": {
       "tags": [],
       "implicitDependencies": ["eternal"]
+    },
+    "holidays": {
+      "tags": []
+    },
+    "shared-config": {
+      "tags": []
     }
   }
 }

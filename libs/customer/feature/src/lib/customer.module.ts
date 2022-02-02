@@ -28,7 +28,7 @@ import { MockedHttpClient } from './mocked-http-client.service';
     MatButtonModule,
     RouterModule.forChild([
       {
-        path: 'customer',
+        path: '',
         canActivate: [DataGuard],
         children: [
           {

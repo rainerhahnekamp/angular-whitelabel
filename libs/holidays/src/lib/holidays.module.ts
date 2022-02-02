@@ -13,10 +13,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     RouterModule.forChild([
       {
-        path: 'holidays',
-        component: HolidaysComponent
-      }
-    ])
-  ]
+        path: '',
+        component: HolidaysComponent,
+      },
+    ]),
+  ],
 })
 export class HolidaysModule {}

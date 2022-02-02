@@ -14,7 +14,6 @@ import {
   withLatestFrom,
 } from 'rxjs/operators';
 import { CustomerActions } from './customer.actions';
-import { CustomerAppState } from './customer.reducer';
 import { fromCustomer } from './customer.selectors';
 
 @Injectable()
@@ -27,7 +26,7 @@ export class CustomerEffects {
           withLatestFrom(this.store.select(fromCustomer.selectLoadStatus))
         )
       ),
-      filter(([action, loadStatus]) => loadStatus === 'NOT_LOADED'),
+      filter(([, loadStatus]) => loadStatus === 'NOT_LOADED'),
       map(() => CustomerActions.load())
     )
   );
@@ -78,6 +77,6 @@ export class CustomerEffects {
     private actions$: Actions,
     private http: HttpClient,
     private router: Router,
-    private store: Store<CustomerAppState>
+    private store: Store
   ) {}
 }

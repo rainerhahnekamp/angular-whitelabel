@@ -1,6 +1,31 @@
 {
   "version": 1,
   "projects": {
+    "app-shell": {
+      "projectType": "library",
+      "root": "libs/app-shell",
+      "sourceRoot": "libs/app-shell/src",
+      "prefix": "eternal",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app-shell"],
+          "options": {
+            "jestConfig": "libs/app-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/app-shell/src/**/*.ts",
+              "libs/app-shell/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "customer-data": {
       "projectType": "library",
       "root": "libs/customer/data",
@@ -219,6 +244,56 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/eternal-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "holidays": {
+      "projectType": "library",
+      "root": "libs/holidays",
+      "sourceRoot": "libs/holidays/src",
+      "prefix": "eternal",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/holidays"],
+          "options": {
+            "jestConfig": "libs/holidays/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/holidays/src/**/*.ts",
+              "libs/holidays/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-config": {
+      "projectType": "library",
+      "root": "libs/shared/config",
+      "sourceRoot": "libs/shared/config/src",
+      "prefix": "eternal",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/config"],
+          "options": {
+            "jestConfig": "libs/shared/config/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/config/src/**/*.ts",
+              "libs/shared/config/src/**/*.html"
+            ]
           }
         }
       }
