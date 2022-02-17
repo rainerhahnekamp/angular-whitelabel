@@ -1,1 +1,1 @@
-export * from './lib/shared-config.module';
+export { Config } from './lib/config';

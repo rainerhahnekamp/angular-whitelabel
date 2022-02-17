@@ -248,6 +248,125 @@
         }
       }
     },
+    "gourmet-traveller": {
+      "projectType": "application",
+      "root": "apps/gourmet-traveller",
+      "sourceRoot": "apps/gourmet-traveller/src",
+      "prefix": "eternal",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/gourmet-traveller",
+            "index": "apps/gourmet-traveller/src/index.html",
+            "main": "apps/gourmet-traveller/src/main.ts",
+            "polyfills": "apps/gourmet-traveller/src/polyfills.ts",
+            "tsConfig": "apps/gourmet-traveller/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/gourmet-traveller/src/favicon.ico",
+              "apps/gourmet-traveller/src/assets"
+            ],
+            "styles": ["apps/gourmet-traveller/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/gourmet-traveller/src/environments/environment.ts",
+                  "with": "apps/gourmet-traveller/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "gourmet-traveller:build:production"
+            },
+            "development": {
+              "browserTarget": "gourmet-traveller:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "gourmet-traveller:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/gourmet-traveller/src/**/*.ts",
+              "apps/gourmet-traveller/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/gourmet-traveller"],
+          "options": {
+            "jestConfig": "apps/gourmet-traveller/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "gourmet-traveller-e2e": {
+      "root": "apps/gourmet-traveller-e2e",
+      "sourceRoot": "apps/gourmet-traveller-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/gourmet-traveller-e2e/cypress.json",
+            "tsConfig": "apps/gourmet-traveller-e2e/tsconfig.e2e.json",
+            "devServerTarget": "gourmet-traveller:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "gourmet-traveller:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/gourmet-traveller-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "holidays": {
       "projectType": "library",
       "root": "libs/holidays",

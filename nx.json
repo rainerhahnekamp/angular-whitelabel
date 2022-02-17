@@ -49,6 +49,13 @@
       "tags": [],
       "implicitDependencies": ["eternal"]
     },
+    "gourmet-traveller": {
+      "tags": []
+    },
+    "gourmet-traveller-e2e": {
+      "tags": [],
+      "implicitDependencies": ["gourmet-traveller"]
+    },
     "holidays": {
       "tags": []
     },

@@ -1,5 +1,5 @@
 <div class="container">
-  <mat-card *ngFor="let holiday of holidays">
+  <mat-card *ngFor="let holiday of holidays$ | async">
     <mat-card-header>
       <mat-card-title>{{ holiday.title }}</mat-card-title>
       <mat-card-subtitle>{{ holiday.teaser }}</mat-card-subtitle>
