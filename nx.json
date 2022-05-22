@@ -14,12 +14,7 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "ZjJjZGNiMTktNzA2YS00YTQ1LTg3MDQtNDI5YTI5YmVhZTBlfHJlYWQtd3JpdGU="
       }
     }
@@ -37,48 +32,22 @@
       "tags": []
     },
     "customer-data": {
-      "tags": [
-        "domain:customer",
-        "type:data"
-      ]
+      "tags": ["domain:customer", "type:data"]
     },
     "customer-feature": {
-      "tags": [
-        "domain:customer",
-        "type:feature"
-      ]
+      "tags": ["domain:customer", "type:feature"]
     },
     "customer-model": {
-      "tags": [
-        "domain:customer",
-        "type:model"
-      ]
+      "tags": ["domain:customer", "type:model"]
     },
     "customer-ui": {
-      "tags": [
-        "domain:customer",
-        "type:ui"
-      ]
+      "tags": ["domain:customer", "type:ui"]
     },
     "eternal": {
-      "tags": [
-        "app"
-      ]
-    },
-    "eternal-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "eternal"
-      ]
+      "tags": ["app"]
     },
     "gourmet-traveller": {
       "tags": []
-    },
-    "gourmet-traveller-e2e": {
-      "tags": [],
-      "implicitDependencies": [
-        "gourmet-traveller"
-      ]
     },
     "holidays": {
       "tags": []
