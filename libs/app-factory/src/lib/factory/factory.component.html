@@ -13,13 +13,19 @@
     <mat-drawer mode="side" opened>
       <ul>
         <li *ngIf="config.featureToggles.holidaysEnabled">
-          <a mat-raised-button routerLink="/holidays">Holidays</a>
+          <a mat-raised-button routerLink="/holidays">{{
+            'sidemenu.holidays' | transloco
+          }}</a>
         </li>
         <li *ngIf="config.featureToggles.customerEnabled">
-          <a mat-raised-button routerLink="/customer">Customers</a>
+          <a mat-raised-button routerLink="/customer">{{
+            'sidemenu.customers' | transloco
+          }}</a>
         </li>
         <li *ngIf="config.featureToggles.diaryEnabled">
-          <a mat-raised-button routerLink="/diary">Diary</a>
+          <a mat-raised-button routerLink="/diary">{{
+            'sidemenu.diary' | transloco
+          }}</a>
         </li>
       </ul>
     </mat-drawer>

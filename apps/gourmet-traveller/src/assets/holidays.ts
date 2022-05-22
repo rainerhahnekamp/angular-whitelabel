@@ -1,4 +1,4 @@
-export const foods = [
+export const holidays = [
   {
     id: 1,
     title: 'Tafelspitz',

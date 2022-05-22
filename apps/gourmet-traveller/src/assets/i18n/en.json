@@ -1,0 +1,10 @@
+{
+  "sidemenu": {
+    "holidays": "Foods",
+    "customers": "Customers",
+    "diary": "Diary"
+  },
+  "holidays": {
+    "book": "Reserve Table"
+  }
+}

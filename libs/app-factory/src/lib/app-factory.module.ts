@@ -5,6 +5,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { FactoryComponent } from './factory/factory.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   imports: [
@@ -13,6 +15,8 @@ import { FactoryComponent } from './factory/factory.component';
     MatToolbarModule,
     RouterModule,
     MatButtonModule,
+    HttpClientModule,
+    TranslocoRootModule,
   ],
   declarations: [FactoryComponent],
 })

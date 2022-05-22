@@ -13,7 +13,7 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
-import { foods } from './foods';
+import { holidays } from '../assets/holidays';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -38,7 +38,7 @@ import { foods } from './foods';
     {
       provide: HolidaysService,
       useValue: {
-        findAll: () => of(foods),
+        findAll: () => of(holidays),
       },
     },
   ],
