@@ -4,7 +4,7 @@ import {
   createDefaultRoutes,
   defaultModules,
   defaultProviders,
-} from '@eternal/app-shell';
+} from '@eternal/app-factory';
 import { Config } from '@eternal/shared/config';
 import { of } from 'rxjs';
 import { HolidaysService } from '../../../../libs/holidays/src/lib/holidays.service';
@@ -27,7 +27,7 @@ import { HomeComponent } from './home.component';
       provide: Config,
       useFactory: () =>
         new Config(
-          'Finest Cuisines in the World',
+          'Top Austrian Food',
           'gourmet-traveller',
           environment.baseUrl,
           environment.authUrl,
@@ -52,6 +52,18 @@ import { HomeComponent } from './home.component';
               maxCount: 12,
             },
             {
+              id: 5,
+              title: 'Palatschinken',
+              teaser: 'Sweet lunch',
+              description:
+                "Although it is very sweet and might be identified as dessert on the first look, it isn't. It is a full lunch and will fill up even the most empty stomach. Don't order it in Germany. They don't know what this is 😉",
+              imageUrl: 'assets/Palatschinken.jpg',
+              typeId: 1,
+              durationInDays: 3,
+              minCount: 5,
+              maxCount: 12,
+            },
+            {
               id: 2,
               title: 'Wiener Schnitzel',
               teaser: 'Traditional Lunch',
@@ -70,6 +82,30 @@ import { HomeComponent } from './home.component';
               description:
                 'The Cardinal Slices are a popular dessert of the Viennese cuisine and taste divine – in the truest sense of the word. In fact, the name of the Viennese delicacy results from its visual appearance. The sponge mixture in combination with beaten egg whites corresponds perfectly to the colors of the Catholic Church – yellow and white. Don’t hesitate to taste a piece of this heavenly pleasure!',
               imageUrl: 'assets/Kardinalschnitte.jpg',
+              typeId: 1,
+              durationInDays: 3,
+              minCount: 5,
+              maxCount: 12,
+            },
+            {
+              id: 4,
+              title: 'Gulasch',
+              teaser: 'Solid lunch',
+              description:
+                "Officially definied as a soup, it is the complete opposite. You don't need anything else after you are finished with Gulasch. Different variations are possible.",
+              imageUrl: 'assets/Gulasch.jpg',
+              typeId: 1,
+              durationInDays: 3,
+              minCount: 5,
+              maxCount: 12,
+            },
+            {
+              id: 6,
+              title: 'Würstel mit Senf',
+              teaser: 'The quickie ',
+              description:
+                "If it is very late at night, if you had too much for breakfast, it dosn't matter when. Würstel mit Senf as snack always works.",
+              imageUrl: 'assets/WürstelmitSenf.jpg',
               typeId: 1,
               durationInDays: 3,
               minCount: 5,

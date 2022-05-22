@@ -7,7 +7,7 @@ import {
   createDefaultRoutes,
   defaultModules,
   defaultProviders,
-} from '@eternal/app-shell';
+} from '@eternal/app-factory';
 import { Config } from '@eternal/shared/config';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';

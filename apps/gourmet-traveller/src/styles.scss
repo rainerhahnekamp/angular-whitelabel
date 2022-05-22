@@ -2,8 +2,10 @@
 
 html, body {
   height: 100%;
+  background: lightgrey;
 }
 
-.primary-bg {
+.primary-bg, .mat-drawer {
   background: grey;
 }
+

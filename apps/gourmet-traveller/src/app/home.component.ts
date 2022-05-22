@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'eternal-home',
   template: `<p>
     Welcome to Gourmet Travellers. You will find here a collection of the best
-    destinations if you are somebody who enjoys good food
+    Austrian cuisine.
   </p>`,
 })
 export class HomeComponent {}

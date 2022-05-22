@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@eternal/app-shell": ["libs/app-shell/src/index.ts"],
+      "@eternal/app-factory": ["libs/app-factory/src/index.ts"],
       "@eternal/customer/data": ["libs/customer/data/src/index.ts"],
       "@eternal/customer/feature": ["libs/customer/feature/src/index.ts"],
       "@eternal/customer/model": ["libs/customer/model/src/index.ts"],

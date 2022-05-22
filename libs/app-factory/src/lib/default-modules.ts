@@ -7,11 +7,11 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
-import { AppShellModule } from './app-shell.module';
+import { AppFactoryModule } from './app-factory.module';
 
 export const defaultModules = [
   BrowserAnimationsModule,
-  AppShellModule,
+  AppFactoryModule,
   MatButtonModule,
   MatSidenavModule,
   MatToolbarModule,

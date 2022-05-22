@@ -1,17 +1,17 @@
 {
   "version": 1,
   "projects": {
-    "app-shell": {
+    "app-factory": {
       "projectType": "library",
-      "root": "libs/app-shell",
-      "sourceRoot": "libs/app-shell/src",
+      "root": "libs/app-factory",
+      "sourceRoot": "libs/app-factory/src",
       "prefix": "eternal",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/app-shell"],
+          "outputs": ["coverage/libs/app-factory"],
           "options": {
-            "jestConfig": "libs/app-shell/jest.config.js",
+            "jestConfig": "libs/app-factory/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -19,8 +19,8 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/app-shell/src/**/*.ts",
-              "libs/app-shell/src/**/*.html"
+              "libs/app-factory/src/**/*.ts",
+              "libs/app-factory/src/**/*.html"
             ]
           }
         }
