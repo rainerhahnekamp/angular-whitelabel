@@ -1,15 +1,21 @@
 <div class="container">
-  <mat-card *ngFor="let holiday of holidays$ | async">
-    <mat-card-header>
-      <mat-card-title>{{ holiday.title }}</mat-card-title>
-      <mat-card-subtitle>{{ holiday.teaser }}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image [src]="holiday.imageUrl" [alt]="holiday.title" />
-    <mat-card-content>
-      {{ holiday.description }}
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button>{{ 'holidays.book' | transloco }}</button>
-    </mat-card-actions>
-  </mat-card>
+  <holiday-card
+    *ngFor="let holiday of holidays$ | async"
+    [attr.holiday]="holiday"
+    (holidaySelected)="handleHolidaySelected($event)"
+  >
+  </holiday-card>
 </div>
+
+<!-- ViewContainerRef approach
+<div class="container" #uiCard></div>
+-->
+
+<!-- TemplateOutlet approach
+<ndc-dynamic
+  *ngIf="inputs$ | async as inputs"
+  [ndcDynamicComponent]="holidayConfig.holidayCardsComponent"
+  [ngComponentOutletNdcDynamicInputs]="inputs"
+  [ngComponentOutletNdcDynamicOutputs]="outputs"
+></ndc-dynamic>
+-->

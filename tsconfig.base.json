@@ -20,6 +20,7 @@
       "@eternal/customer/feature": ["libs/customer/feature/src/index.ts"],
       "@eternal/customer/model": ["libs/customer/model/src/index.ts"],
       "@eternal/customer/ui": ["libs/customer/ui/src/index.ts"],
+      "@eternal/gourmet/restaurants": ["libs/gourmet/restaurants/src/index.ts"],
       "@eternal/holidays": ["libs/holidays/src/index.ts"],
       "@eternal/shared/config": ["libs/shared/config/src/index.ts"]
     }

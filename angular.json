@@ -222,6 +222,31 @@
         }
       }
     },
+    "gourmet-restaurants": {
+      "projectType": "library",
+      "root": "libs/gourmet/restaurants",
+      "sourceRoot": "libs/gourmet/restaurants/src",
+      "prefix": "eternal",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/gourmet/restaurants"],
+          "options": {
+            "jestConfig": "libs/gourmet/restaurants/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/gourmet/restaurants/src/**/*.ts",
+              "libs/gourmet/restaurants/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "gourmet-traveller": {
       "projectType": "application",
       "root": "apps/gourmet-traveller",
