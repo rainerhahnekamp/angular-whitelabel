@@ -6,9 +6,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslocoModule } from '@ngneat/transloco';
 import { HolidayCardComponent } from './holidays/holiday-card.component';
+import { HolidayCardsComponent } from './holidays/hoiliday-cards.component';
 
 @NgModule({
-  declarations: [HolidaysComponent, HolidayCardComponent],
+  declarations: [
+    HolidaysComponent,
+    HolidayCardComponent,
+    HolidayCardsComponent,
+  ],
   imports: [
     CommonModule,
     MatButtonModule,

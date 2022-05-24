@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
 import { HolidaysService } from '../../../../libs/holidays/src/lib/holidays.service';
 import { DishService } from './food.service';
 import { HolidayConfig } from '../../../../libs/holidays/src/lib/holidays/holiday-config';
+import { DishesComponent } from './dishes.component';
 
 const holidayConfig: HolidayConfig = {
   cardConfig: {
@@ -21,10 +22,11 @@ const holidayConfig: HolidayConfig = {
     showDescription: false,
     bookPlacement: 'top',
   },
+  uiCardComponent: DishesComponent,
 };
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, DishesComponent],
   imports: [
     BrowserModule,
     ...defaultModules,
