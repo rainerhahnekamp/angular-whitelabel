@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { TranslocoModule } from '@ngneat/transloco';
 import { HolidayCardComponent } from './holidays/holiday-card.component';
 import { HolidayCardsComponent } from './holidays/hoiliday-cards.component';
+import { DynamicModule } from 'ng-dynamic-component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HolidayCardsComponent } from './holidays/hoiliday-cards.component';
       },
     ]),
     TranslocoModule,
+    DynamicModule,
   ],
 })
 export class HolidaysModule {}

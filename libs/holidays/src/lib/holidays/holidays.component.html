@@ -1,9 +1,8 @@
-<!--<div class="container">-->
-<!--  <eternal-holiday-card-->
-<!--    *ngFor="let holiday of holidays$ | async"-->
-<!--    [holiday]="holiday"-->
-<!--    [config]="config.cardConfig"-->
-<!--  >-->
-<!--  </eternal-holiday-card>-->
-<!--</div>-->
-<div #uiCard></div>
+<div class="container">
+  <ndc-dynamic
+    [ndcDynamicComponent]="config.uiCardComponent"
+    [ndcDynamicInputs]="inputs"
+    [ndcDynamicOutputs]="outputs"
+  ></ndc-dynamic>
+</div>
+<!--<div #uiCard></div>-->
