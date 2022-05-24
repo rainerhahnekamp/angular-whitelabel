@@ -11,6 +11,17 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
+import { HolidaysService } from '../../../../libs/holidays/src/lib/holidays.service';
+import { DishService } from './food.service';
+import { HolidayConfig } from '../../../../libs/holidays/src/lib/holidays/holiday-config';
+
+const holidayConfig: HolidayConfig = {
+  cardConfig: {
+    showMoreInfo: true,
+    showDescription: false,
+    bookPlacement: 'top',
+  },
+};
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -32,6 +43,8 @@ import { RouterModule } from '@angular/router';
           { diaryEnabled: false, customerEnabled: false, holidaysEnabled: true }
         ),
     },
+    { provide: HolidaysService, useClass: DishService },
+    { provide: HolidayConfig, useValue: holidayConfig },
   ],
   bootstrap: [AppComponent],
 })

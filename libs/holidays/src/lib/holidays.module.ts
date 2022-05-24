@@ -5,9 +5,10 @@ import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { TranslocoModule } from '@ngneat/transloco';
+import { HolidayCardComponent } from './holidays/holiday-card.component';
 
 @NgModule({
-  declarations: [HolidaysComponent],
+  declarations: [HolidaysComponent, HolidayCardComponent],
   imports: [
     CommonModule,
     MatButtonModule,

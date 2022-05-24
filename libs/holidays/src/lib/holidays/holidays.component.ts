@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { holidays } from '../data';
 import { Holiday } from '../holiday';
 import { HolidaysService } from '../holidays.service';
+import { HolidayConfig } from './holiday-config';
 
 @Component({
   selector: 'eternal-holidays',
@@ -10,6 +10,9 @@ import { HolidaysService } from '../holidays.service';
   styleUrls: ['./holidays.component.scss'],
 })
 export class HolidaysComponent {
-  constructor(private holidayService: HolidaysService) {}
+  constructor(
+    private holidayService: HolidaysService,
+    public config: HolidayConfig
+  ) {}
   holidays$: Observable<Holiday[]> = this.holidayService.findAll();
 }
