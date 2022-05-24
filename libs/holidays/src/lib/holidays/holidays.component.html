@@ -1,8 +1,7 @@
 <div class="container">
-  <ndc-dynamic
-    [ndcDynamicComponent]="config.uiCardComponent"
-    [ndcDynamicInputs]="inputs"
-    [ndcDynamicOutputs]="outputs"
-  ></ndc-dynamic>
+  <holiday-card
+    *ngFor="let holiday of inputs.holidays"
+    [attr.holiday]="holiday"
+  ></holiday-card>
 </div>
 <!--<div #uiCard></div>-->

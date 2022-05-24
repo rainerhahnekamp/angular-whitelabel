@@ -7,6 +7,7 @@ import {
 import { Holiday } from '../holiday';
 import { HolidaysService } from '../holidays.service';
 import { HolidayConfig } from './holiday-config';
+import { WebComponentLoader } from './web-component-loader.service';
 
 @Component({
   selector: 'eternal-holidays',
@@ -18,7 +19,7 @@ export class HolidaysComponent {
     | ViewContainerRef
     | undefined;
 
-  inputs: { holidays: Holiday[] } = { holidays: [] };
+  inputs: { holidays: string[] } = { holidays: [] };
   outputs = {
     holidaySelected: (holiday: Holiday) =>
       console.log(`You selected ${holiday.title}`),
@@ -27,10 +28,17 @@ export class HolidaysComponent {
   constructor(
     private holidayService: HolidaysService,
     public config: HolidayConfig,
-    private cfr: ComponentFactoryResolver
+    private cfr: ComponentFactoryResolver,
+    private wcLoader: WebComponentLoader
   ) {
+    this.wcLoader.load('/assets/holiday-card.js');
     this.holidayService
       .findAll()
-      .subscribe((holidays) => (this.inputs.holidays = holidays));
+      .subscribe(
+        (holidays) =>
+          (this.inputs.holidays = holidays.map((holiday) =>
+            JSON.stringify(holiday)
+          ))
+      );
   }
 }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HolidaysComponent } from './holidays/holidays.component';
 import { RouterModule } from '@angular/router';
@@ -28,5 +28,6 @@ import { DynamicModule } from 'ng-dynamic-component';
     TranslocoModule,
     DynamicModule,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HolidaysModule {}
