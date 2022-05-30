@@ -2,9 +2,9 @@ div.container {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  mat-card {
+  mat-card, eternal-holiday-card {
     flex: 1 0 200px;
-    max-width: 400px;
+    max-width: 250px;
     margin: 2em;
   }
 }
